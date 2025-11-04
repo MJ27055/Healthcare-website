@@ -1,38 +1,531 @@
-.App {
+ /* --- Global Styles & Variables --- */
+:root {
+  --primary-color: #1f5bff; /* Main blue */
+  --secondary-color: #1c274c; /* Dark navy */
+  --text-color: #6b7280; /* Gray */
+  --heading-color: #1c274c; /* Dark navy */
+  --bg-light: #f9fafb; /* Light gray */
+  --white: #ffffff;
+  --border-color: #e5e7eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+/* New padding class for the features section to make it look tighter */
+.section-padding-small {
+  padding: 50px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.inline-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #1a4ccc;
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #151f3d;
+  color: var(--white);
+}
+
+
+
+/* --- Hero --- */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0; /* Increased padding for better vertical centering */
+  position: relative;
+  color: var(--white);
+  overflow: hidden; /* Hide overflowing animation elements initially */
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 600px; /* Adjust max-width as per template */
+  margin-right: auto; /* Pushes content to the left */
+  position: relative; /* Ensure content is above overlay */
+  z-index: 2;
+  text-align: left; /* Explicitly align text to the left */
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: black; /* White for visibility over overlay */
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  color: #1c274c;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: black; /* Slightly off-white for contrast */
+}
+
+/* Hero Section Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-subtitle.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0; /* Hidden by default */
+  animation-delay: 0.2s;
+}
+
+.hero-title.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.hero-description.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.hero-buttons.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+/* Additional Sliding Animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-left {
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+
+/* --- Features (Updated to White Cards) --- */
+.features {
+  /* Set to white background as requested */
+  background-color: var(--white);
+  color: var(--heading-color);
+  /* Use section-padding-small */
+}
+
+.features-grid {
+  /* Changed to 3 columns to match the 3 feature items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-item-card {
+  /* Added card styling for the 'separated' look */
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Stronger shadow for separation */
+  text-align: center;
+  border-top: 5px solid var(--primary-color); /* Subtle color accent */
+  transition: transform 0.3s ease;
+}
+
+.feature-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.feature-icon-wrapper img {
+  width: 50px;
+  height: 50px;
+}
+
+.feature-item-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* --- About (Welcome To Diagonsy) --- */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-list {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-list li {
+  margin-bottom: 0.8rem;
+  font-weight: 500; /* Slightly reduced weight for softer look */
+  color: var(--text-color); /* Use text color, not heading color */
+  display: flex;
+  align-items: center;
+}
+
+/* NEW: Style for the Checkmark Icon */
+.about-list-icon {
+  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  font-weight: 700;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* --- Services --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.service-card-icon {
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.service-card-icon img {
+  width: 50px;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- Why Choose Us --- */
+.choose-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.choose-item-icon img {
+  width: 40px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.why-choose-us-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* --- Doctors --- */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.doctor-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  overflow: hidden;
+}
+
+.doctor-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background-color: #e0e0e0;
+}
+
+.doctor-card h3 {
+  margin-bottom: 0.25rem;
+  margin-top: 1rem;
+}
+
+.doctor-card p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Testimonials --- */
+.testimonial-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card h4 {
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-card span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* --- Appointment --- */
+.appointment-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.appointment-form .btn {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+
+
+/* --- Responsive (Simple Example) --- */
+@media (max-width: 992px) {
+  .section-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  .doctors-grid,
+  .services-grid,
+  .features-grid { /* Added features-grid here to stack to 2 columns */
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-image {
+    order: -1; /* Puts image on top on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+
+  .nav-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .doctors-grid,
+  .services-grid,
+  .features-grid, /* Added features-grid here to stack to 1 column */
+  .form-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 100px 0;
+  }
+  .hero-content {
+    text-align: center; /* Center text on small screens */
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,3 @@
+- [x] Import the banner image '1.png' in src/components/Home.jsx
+- [x] Update the Hero component to set backgroundImage style using the imported image
+- [x] Remove the background-image URL from the .hero class in src/App.css
