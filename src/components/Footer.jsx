@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <h2 className="footer-logo"><Link to="/">Diagonsy</Link></h2>
+          <h2 className="footer-logo"><Link to="/">Diagnosy</Link></h2>
           <p>Diagnosy always try to provide the most common of get the proper are for cure Healthcare Treatment.</p>
         </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2025 Diagonsy. All rights reserved.
+        © 2025 Diagnosy. All rights reserved.
       </div>
 
       <style>{`

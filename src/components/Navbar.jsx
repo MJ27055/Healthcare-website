@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="nav-content">
         <div className="logo">
           <Link to="/">
-            <div className="logo-text">Diagonsy</div>
+            <div className="logo-text">Diagnosy</div>
             <div className="logo-subtitle">Hospital Service</div>
           </Link>
         </div>

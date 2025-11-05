@@ -48,7 +48,7 @@ export default function ServicePage() {
       {
         id: 1,
         title: "Oncology",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce27721a2c8464e88b6656_9.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2aef70e278083e43588b_8.jpg",
         link: "/service/oncology",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Oncology treatment"],
         description: "Oncology always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. This department focuses on the diagnosis and treatment of cancer."
@@ -56,7 +56,7 @@ export default function ServicePage() {
       {
         id: 2,
         title: "Cardiology",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce27b714bd05390ae2647f_2.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce27721a2c8464e88b6656_9.jpg",
         link: "/service/cardiology",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Cardiology treatment"],
         description: "Cardiology always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. We specialize in disorders of the heart and the cardiovascular system."
@@ -64,7 +64,7 @@ export default function ServicePage() {
       {
         id: 3,
         title: "Gynecology",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a6ff329ee0c4b29beca_4.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2ad914bd05b749e299df_7.jpg",
         link: "/service/gynecology",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Gynecology treatment"],
         description: "Gynecology always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. Dedicated care for women's reproductive health."
@@ -72,7 +72,7 @@ export default function ServicePage() {
       {
         id: 4,
         title: "Neurology",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a5b5fad4a0b4a8e9e7e_3.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a9dcf939edff7f3215d_5.jpg",
         link: "/service/neurology",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Neurology treatment"],
         description: "Neurology always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. Specialized services for disorders of the nervous system."
@@ -80,7 +80,7 @@ export default function ServicePage() {
       {
         id: 5,
         title: "Child Health",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a9dcf939edff7f3215d_5.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a6ff329ee0c4b29beca_4.jpg",
         link: "/service/child-health",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Child Health treatment"],
         description: "Child Health always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. Comprehensive pediatric care for children of all ages."
@@ -88,7 +88,7 @@ export default function ServicePage() {
       {
         id: 6,
         title: "Dental Care",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2ab3c8b33a001829b8b1_6.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2a5b5fad4a0b4a8e9e7e_3.jpg",
         link: "/service/dental-care",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Dental Care treatment"],
         description: "Dental Care always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. High-quality services for oral and dental health."
@@ -96,7 +96,7 @@ export default function ServicePage() {
       {
         id: 7,
         title: "Nephrology",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2ad914bd05b749e299df_7.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce27b714bd05390ae2647f_2.jpg",
         link: "/service/nephrology",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Nephrology treatment"],
         description: "Nephrology always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. Focusing on the care of kidney-related diseases."
@@ -104,7 +104,7 @@ export default function ServicePage() {
       {
         id: 8,
         title: "Lab Test",
-        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2aef70e278083e43588b_8.jpg",
+        image: "https://cdn.prod.website-files.com/63b3f9e2d9818851cf576a6f/63ce2ab3c8b33a001829b8b1_6.jpg",
         link: "/service/lab-test",
         bullets: ["Expert Doctor always ready to make quick dicission", "Modern technology uses for Lab Test"],
         description: "Lab Test always help to provide proper treatment for most of get the proper cure and healty life which is the cooperate focus thing for us patient our main proprity services. Reliable and quick diagnostic laboratory services."
